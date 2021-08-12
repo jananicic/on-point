@@ -1,46 +1,33 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Part I - Typeahead component
+Develop a typeahead component using React, without the help of prebuilt component libraries. You may assume the following simple RESTful API that returns a JSON array.
+GET /names/?search=al&limit=10
+Example payload response:
+[
+{id: 1, name: 'Alabama'},
+{id: 2, name: 'Alaska'},
+...
+]
+Required behavior:
+1. As the user types, they get a dropdown list of suggestions provided by the API
+2. Selecting one of the suggestions should add it to the input field
+3. The input field should support holding more than one selection, if required by the consuming application
+4. Integrate your component to some app code like a submission button that does something simple with the input 
+   
+Constraints
+   ● Manage state entirely within React. Do not use external state management such as Redux.
+   ● You may not use any pre-built components from a library
+   ● Please use material-ui for styling
+   
+Part II - Caching
+   Imagine the API used in part 1 is very expensive to use. Develop a caching function to use in conjunction with the component you developed, and wire it in to your component.
+   
+Part III - Written Questions
+   Please provide a written response to the following questions:
+   1. If you had control of the web-server, what are some ways you might implement a caching solution?
+   2. How might you implement offline caching for your typeahead component?
+   3. When using traditional session cookies, what are the primary security concerns and
+      mitigation techniques you might use?
+   4. What are some advantages and disadvantages to using JWT for authorization and
+      authentication in a web application?
+   5. What are all the ways you can think of to write BAD React code?
+   6. What new Web or React APIs are you most excited about?
